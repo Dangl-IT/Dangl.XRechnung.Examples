@@ -1,6 +1,6 @@
 # Dangl.XRechnung.Examples
 
-> An online version of the converter is freely accessible at [my blog](https://web-gaeb.de/)
+> An online version of the converter is freely accessible [at **WebGAEB**](https://web-gaeb.de/)
 > A more detailed feature description is available [on our website](https://www.dangl-it.com/products/xrechnung/).
 
 > This project requires **Visual Studio 2017** or newer. Otherwise, the Dotnet CLI is also supported.

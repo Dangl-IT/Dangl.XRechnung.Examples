@@ -1,20 +1,21 @@
 # Dangl.XRechnung.Examples
 
-> An online version of the converter is freely accessible at [my blog](https://blog.dangl.me/xrechnung-converter/)  TODO: ADD A WORKING LINK
-> A more detailed feature description is available [on my website](https://www.dangl-it.com/products/xrechnung/).
+> An online version of the converter is freely accessible at [my blog](https://web-gaeb.de/)
+> A more detailed feature description is available [on our website](https://www.dangl-it.com/products/xrechnung/).
 
 > This project requires **Visual Studio 2017** or newer. Otherwise, the Dotnet CLI is also supported.
 
 This is a _demonstration_ library intended to show the usage of the Dangl.XRechnung project.
 To build this solution, you need to copy four packages into the `./packages` folder, relative to the root of this project:
 * Dangl.XRechnung
-* Dangl.Data.Shared
+* Dangl.AVA
+* Dangl.AVA.IO
 
 > If you are already a customer with support contract, please see any of the packages documentation on how to set up the official NuGet feed for **DanglIT** packages.
 
 These packages are not included in this repository.
 This project is intended to demonstrate the usage of the Dangl.XRechnung library.
-[Please get in touch with me if you are interested in the libraries](https://www.dangl-it.com/contact/?message=I%27m+interested+in+Dangl.XRechnung.+Please+contact+me.).
+[Please get in touch with us if you are interested in the libraries](https://www.dangl-it.com/contact/?message=I%27m+interested+in+Dangl.XRechnung.+Please+contact+me.).
 
 ## .NET support
 

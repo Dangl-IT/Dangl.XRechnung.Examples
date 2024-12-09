@@ -1,4 +1,4 @@
-using CommandLine.Text;
+﻿using CommandLine.Text;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,6 +35,19 @@ namespace Dangl.XRechnung.Examples
                             }
                         }
                     }
+
+                    Console.WriteLine("Saving invoice to the specified path...");
+
+                    using (var invoiceStream = XRechnungExporter.ExportInvoiceToStream())
+                    {
+                        var outputPath = Path.GetFullPath(optionsParser.Result.OutputFilePath);
+                        using (var outputStream = File.Create(outputPath))
+                        {
+                            invoiceStream.CopyTo(outputStream);
+                        }
+                    }
+
+                    Console.WriteLine("Invoice has been successfully saved.");
                 }
                 catch (Exception e)
                 {

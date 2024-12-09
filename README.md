@@ -6,7 +6,7 @@
 > This project requires **Visual Studio 2017** or newer. Otherwise, the Dotnet CLI is also supported.
 
 This is a _demonstration_ library intended to show the usage of the Dangl.XRechnung project.
-To build this solution, you need to copy four packages into the `./packages` folder, relative to the root of this project:
+To build this solution, you need to copy three packages into the `./packages` folder, relative to the root of this project:
 * Dangl.XRechnung
 * Dangl.AVA
 * Dangl.AVA.IO

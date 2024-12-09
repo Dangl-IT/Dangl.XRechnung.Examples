@@ -1,4 +1,7 @@
-﻿using CommandLine.Text;
+using CommandLine.Text;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace Dangl.XRechnung.Examples
 {
@@ -14,20 +17,22 @@ namespace Dangl.XRechnung.Examples
                 try
                 {
                     var filePath = Path.GetFullPath(optionsParser.Result.InputFilePath);
-                    using var fileStream = File.OpenRead(filePath);
-                    var validationResult = await XRechnungValidator.ValidateXRechnungFileAsync(fileStream);
-                    fileStream.Position = 0;
-                    if (validationResult.IsSuccess)
+                    using (var fileStream = File.OpenRead(filePath))
                     {
-                        var invoiceResult = await XRechnungImporter.ReadXRechnungAsync(fileStream);
-                        if (!invoiceResult.IsSuccess)
+                        var validationResult = await XRechnungValidator.ValidateXRechnungFileAsync(fileStream);
+                        fileStream.Position = 0;
+                        if (validationResult.IsSuccess)
                         {
-                            Console.WriteLine("During file reading next error was occurred:");
-                            Console.WriteLine(invoiceResult.ErrorMessage);
-                        }
-                        else
-                        {
-                            XRechnungPrinter.PrintInvoiceInformation(invoiceResult.Value);
+                            var invoiceResult = await XRechnungImporter.ReadXRechnungAsync(fileStream);
+                            if (!invoiceResult.IsSuccess)
+                            {
+                                Console.WriteLine("During file reading next error was occurred:");
+                                Console.WriteLine(invoiceResult.ErrorMessage);
+                            }
+                            else
+                            {
+                                XRechnungPrinter.PrintInvoiceInformation(invoiceResult.Value);
+                            }
                         }
                     }
                 }

@@ -1,5 +1,7 @@
 ﻿using Dangl.XRechnung.Models;
 using Dangl.XRechnung.Models.InvoiceElements;
+using System;
+using System.Collections.Generic;
 
 namespace Dangl.XRechnung.Examples
 {

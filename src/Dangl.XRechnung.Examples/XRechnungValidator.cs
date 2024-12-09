@@ -1,5 +1,8 @@
 ﻿using Dangl.Data.Shared;
 using Dangl.XRechnung.Validation;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace Dangl.XRechnung.Examples
 {

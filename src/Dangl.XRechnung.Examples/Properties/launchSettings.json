@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Dangl.XRechnung.Examples": {
+      "commandName": "Project",
+      "commandLineArgs": "-i \"$(SolutionDir)\\XRechnungFiles\\Xrechnung.xml\" -o XRechnungExport"
+    }
+  }
+}

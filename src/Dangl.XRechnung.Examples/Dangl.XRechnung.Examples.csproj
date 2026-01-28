@@ -11,8 +11,8 @@
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
-    <PackageReference Include="Dangl.Data.Shared" Version="2.5.1" />
-    <PackageReference Include="Dangl.XRechnung" Version="1.0.0-beta0148" />
+    <PackageReference Include="Dangl.Data.Shared" Version="2.5.2" />
+    <PackageReference Include="Dangl.XRechnung" Version="1.5.7" />
   </ItemGroup>
 
 </Project>

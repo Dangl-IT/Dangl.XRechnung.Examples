@@ -21,7 +21,8 @@ namespace Dangl.XRechnung.Examples
 
                 foreach (var error in result.Errors)
                 {
-                    Console.WriteLine($"Id: {error.Id}. Error message: {error.ErrorMessage}. LineNumber: {error.LineNumber}. LinePosition: {error.LinePosition}.");
+                    
+                    Console.WriteLine($"Type: {error.ResultType}. Error message: {Environment.NewLine}{error.ResultMessage}");
                 }
 
                 return RepositoryResult.Fail();
